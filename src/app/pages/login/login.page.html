@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-card class="container">
+      <ion-card-header>
+        <div class="logo">
+            <ion-img src="assets/img/logo-borde.png"></ion-img>
+        </div>
+        <ion-text class="texto">TURISTEO</ion-text>
+      </ion-card-header>
+
+      <ion-card-content>
+        <app-login-form (onsubmit)="onLogin($event)"></app-login-form>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

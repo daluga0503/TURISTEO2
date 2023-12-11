@@ -1,0 +1,30 @@
+
+.place-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.place-info {
+    display: flex;
+    align-items: center;
+}
+
+.place-photo {
+    width: 100px; 
+    height: 100px; 
+    margin-right: 16px; 
+}
+
+.place-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.place-buttons {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+

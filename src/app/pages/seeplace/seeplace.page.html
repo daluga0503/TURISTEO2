@@ -1,0 +1,12 @@
+<ion-content [fullscreen]="false">
+    <div class="custom-margin">
+        <app-place-info
+        *ngFor="let place of placeSvc.places$ | async; let i = index"
+        [place]="place"
+        (onFavClicked)="onChangeFavorite(place, favPlace!!)"
+        [showButtons]="false"
+        [favButton]="true"
+        >
+        </app-place-info>
+    </div>
+</ion-content>

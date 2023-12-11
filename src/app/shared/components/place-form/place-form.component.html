@@ -1,0 +1,29 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()" class="form-place">
+  <ion-list>
+        
+    <app-picture-selectable formControlName="photo"></app-picture-selectable>
+
+    <ion-item class="input">
+      <ion-input formControlName="name" label="{{'placeform.namePlace' | translate}}" placeholder='{{"placeform.name" | translate}}'></ion-input>
+    </ion-item>
+
+    <ion-item class="input">
+      <ion-input formControlName="city" label="{{'placeform.nameCity' | translate}}" placeholder='{{"placeform.city" | translate}}'></ion-input>
+    </ion-item>
+
+
+    <ion-item class="input">
+      <ion-label>{{'placeform.type' | translate}}</ion-label>
+        <ion-select formControlName="typePlace">
+          <ion-select-option value="Park">{{'placeform.park' | translate}}</ion-select-option>
+          <ion-select-option value="Monument">{{'placeform.monument' | translate}}</ion-select-option>
+          <ion-select-option value="Churche">{{'placeform.churche' | translate}}</ion-select-option>
+          <ion-select-option value="Construction">{{'placeform.construction' | translate}}</ion-select-option>
+          <ion-select-option value="Viewpoint">{{'placeform.viewpoint' | translate}}</ion-select-option>
+          <ion-select-option value="Beach">{{'placeform.beach' | translate}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-button type="submit" [disabled]="!form.valid || !form.dirty" class="ion-padding" expand="full" (click)="onSubmit()">{{(mode=='New' ? 'placeform.create' : 'placeform.save') | translate}}</ion-button>
+  </ion-list>
+</form>

@@ -1,0 +1,31 @@
+<ion-card appHighlightCard>
+  <ion-card-content class="place-card-content">
+    <app-fav-buttons
+    *ngIf="place && favButton"
+    [place]="place"
+    (favClick)="onFavClick($event)"
+    ></app-fav-buttons>
+    <div class="place-info">
+      <img [src]="place?.photo" alt="Place Photo" class="place-photo" />
+      <div class="place-details">
+        <ion-card-title>{{ place?.name ?? '' | capitalizeWords }}</ion-card-title>
+        <ion-card-subtitle>
+          <span class="label">{{'placeinfo.city' | translate}}:</span> {{ place?.city }}
+        </ion-card-subtitle>
+        
+        <ion-card-subtitle>
+          <span class="label">{{'placeinfo.type' | translate}}:</span> {{ place?.typePlace }}
+        </ion-card-subtitle>
+      </div>
+    </div>
+
+    <ion-buttons class="place-buttons" slot="end">
+      <app-edit-delete-buttons
+        *ngIf="place && showButtons"
+        [place]="place"
+        (deleteClick)="onDeleteClick($event)"
+        (editClick)="onEditClick($event)"
+      ></app-edit-delete-buttons>
+    </ion-buttons>
+  </ion-card-content>
+</ion-card>

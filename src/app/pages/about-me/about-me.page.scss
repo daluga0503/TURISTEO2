@@ -1,0 +1,50 @@
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-card {
+    max-width: 600px;
+    width: 100%;
+}
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; 
+}
+
+.text-container {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px; 
+}
+
+.description-container {
+    text-align: center;
+    color: white; 
+    margin-top: 10px; 
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+ion-button {
+    margin: 0 8px; 
+}
+
+    @media only screen and (max-width: 600px) {
+    .profile-card {
+        max-width: 100%;
+    }
+}

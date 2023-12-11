@@ -1,0 +1,11 @@
+.favIcon{
+    --border-width: 0;
+    --background: transparent; 
+    --box-shadow: none;
+    --color: inherit;
+    border: 2px solid yellow;
+}
+
+.active{
+    background-color: yellow;
+}

@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="false">
+  <div class="custom-margin">
+      <app-place-fav
+      *ngFor="let favPlace of favSvc.fav$ | async; let i = index"
+      [favPlace] = "favPlace"
+      >
+      </app-place-fav>
+  </div>
+</ion-content>
+

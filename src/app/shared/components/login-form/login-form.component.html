@@ -1,0 +1,30 @@
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <ion-item>
+        <ion-input placeholder="{{'login.email' | translate}}" formControlName="email"></ion-input>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-item>
+
+
+      <p style="color: red;" *ngIf="form.controls['email']?.errors?.['required'] && form.controls['email'].touched">{{"login.emailRequired" | translate}}</p>
+      <p style="color: red;" *ngIf="form.controls['email'].errors?.['email']">{{"login.emailInvalid" | translate}}</p>
+
+      <ion-item>
+        <ion-input placeholder="{{'login.pass' | translate}}" formControlName="password" type="password"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+
+
+
+      <p style="color: red;" *ngIf="form.controls['password'].errors?.['required'] && form.controls['password'].touched">{{"login.passwordRequired" | translate}}</p>
+      <p style="color: red;" *ngIf="form.controls['password'].errors?.['password']">{{"login.passwordInvalid" | translate}}</p>
+
+
+      <div>
+        <ion-button type="submit" [disabled]="!form.valid" expand="block" fill="outline"(click)="onSubmit()">{{"login.buttonLogin" | translate}}</ion-button>
+      </div>
+      <div class="register-link">
+        {{"login.noCuenta" | translate}}<a [routerLink]="['/singup']">{{"login.noCuentaRegister" | translate}}</a>
+      </div>
+    </div>
+</form>
