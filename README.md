@@ -1,8 +1,7 @@
 TURISTEO
 
 Turisteo es una aplicación diseñada para facilitar el trabajo a aquellos turistas que deseen visitar puntos de interés de la ciudad que estan visitando. Podrán tanto consultar los sitios creados por otros usuarios de la aplicación como compartir los sitios que te han resultado interesantes de visitar.
-
-![logo1](https://github.com/daluga0503/TURISTEO/assets/115071227/995779fe-5235-468c-a4a1-81753da2caa1)
+![logo1](https://github.com/daluga0503/TURISTEO2/assets/115071227/88b39f43-c8ce-4a41-b39f-b0096bdd298a)
 
 La aplicación está desarrollada en Ionic y Angular y su backend en Strapi.
 
